@@ -8,6 +8,7 @@ import {CreateCourseComponent} from './create-course/create-course.component';
 import {DragDropComponent} from './drag-drop/drag-drop.component';
 import {TreeDemoComponent} from './tree-demo/tree-demo.component';
 import {VirtualScrollingComponent} from './virtual-scrolling/virtual-scrolling.component';
+import { InputFieldsComponent } from './databinding/input-fields/input-fields.component';
 
 const routes: Routes = [
     {
@@ -19,6 +20,10 @@ const routes: Routes = [
         path: "about",
         component: AboutComponent
     },
+    {
+      path: "inputfield",
+      component: InputFieldsComponent
+  },
     {
         path: 'courses/:id',
         component: CourseComponent,

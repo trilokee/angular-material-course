@@ -1,0 +1,40 @@
+<p>input-fields works!</p>
+<div>
+  <mat-form-field>
+    <mat-label>Course list</mat-label>
+    <mat-select
+      placeholder="Select category"
+      formControlName="category"
+      (selectionChange)="onfieldChange($event.value)"
+    >
+      <mat-option value="BEGINNER"> Beginner</mat-option>
+      <mat-option value="INTERMEDIATE"> Intermediate</mat-option>
+      <mat-option value="ADVANCED"> Advanced</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field>
+    <mat-label>Course Description</mat-label>
+    <input
+      matInput
+      placeholder="Course Description"
+      [value]="uservalue"
+      formControlName="description"
+    />
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-form-field>
+    <mat-label>username</mat-label>
+    <input
+      matInput
+      type="text"
+      name="uservalue"
+      (ngModelChange)="onfieldChange($event)"
+      [(ngModel)]="uservalue"
+    />
+  </mat-form-field>
+</div>
+<!-- END -->
